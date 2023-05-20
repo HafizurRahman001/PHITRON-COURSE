@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+int main()
+{
+
+    int n;
+    scanf("%d", &n);
+    int arr[n][n];
+
+    // taking the array input
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            scanf("%d ", &arr[i][j]);
+        }
+    }
+
+    int flag = 1;
+
+    // checking if the matrix in unit or not
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (i == j)
+            {
+                if (arr[i][j] != 1)
+                {
+                    flag = 0;
+                    break;
+                }
+            }
+            else if (i != j)
+            {
+                if (arr[i][j] != 0)
+                {
+                    flag = 0;
+                    break;
+                }
+            }
+        }
+    }
+
+    // check the flag value and print the result
+    if (flag == 1)
+    {
+        printf("YES\n");
+    }
+    else
+    {
+        printf("NO\n");
+    }
+
+    return 0;
+}
