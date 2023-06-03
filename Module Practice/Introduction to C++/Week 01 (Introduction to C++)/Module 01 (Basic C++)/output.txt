@@ -1,1 +1,5 @@
-hafizur Rahman
+before the sorting
+10 40 5 20 30 
+
+after the sorting
+5 10 20 30 40 
